@@ -1,0 +1,934 @@
+:root {
+  --color-primary: #236b63;
+  --color-primary-dark: #19564f;
+  --color-accent: #a88955;
+  --color-ink: #263a3b;
+  --color-muted: #718382;
+  --color-border: #d7e2df;
+  --color-surface: #f2f6f4;
+  --shadow-card: 0 3px 12px rgb(37 66 63 / 6%);
+}
+
+body,
+.app-shell,
+.app-main,
+.dashboard-page,
+.projects-page,
+.notes-page,
+.team-page,
+.files-page,
+.notifications-page,
+.activity-page,
+.chat-page,
+.public-project-page {
+  color: #263a3b;
+  background: #e8efec;
+}
+
+.app-navbar.is-guest,
+.app-navbar.is-authenticated {
+  border-color: #d1ded9;
+  background: #e0eae5;
+}
+
+.app-navbar.is-guest .navbar-brand,
+.app-navbar.is-guest .navbar-login-link,
+.app-navbar.is-authenticated .navbar-brand,
+.navbar-user-name,
+.workspace-copy strong,
+.sidebar-tip strong {
+  color: #263a3b;
+}
+
+.app-navbar.is-guest .navbar-brand > span:last-child > span,
+.app-navbar.is-authenticated .navbar-brand > span:last-child > span,
+.auth-showcase-copy h2 span,
+.auth-footer a {
+  color: #236b63;
+}
+
+.app-navbar.is-guest .guest-nav-message,
+.navbar-group-label,
+.workspace-copy small,
+.navbar-user-copy small {
+  color: #718382;
+}
+
+.app-navbar.is-guest .navbar-logo,
+.app-navbar.is-authenticated .navbar-logo,
+.auth-logo,
+.footer-brand-icon,
+.workspace-avatar,
+.sidebar-tip-icon,
+.navbar-avatar,
+.dashboard-stat-icon,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.page-insight-icon,
+.project-card-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.notification-icon,
+.shared-file-icon,
+.files-heading-icon,
+.chat-header-icon,
+.auth-feature-icon,
+.auth-preview-project-icon {
+  background: #d8e8e1;
+  color: #236b63;
+}
+
+.app-navbar.is-guest .navbar-register-button,
+.dashboard-button,
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.auth-submit {
+  border-color: #236b63;
+  background: #236b63;
+  color: #fff;
+}
+
+.app-navbar.is-guest .navbar-register-button:hover,
+.dashboard-button:hover,
+.primary-button:hover,
+.notes-primary-button:hover:not(:disabled),
+.team-add-button:hover:not(:disabled),
+.notifications-mark-all:hover:not(:disabled),
+.chat-compose button:hover:not(:disabled),
+.file-upload-form button:hover:not(:disabled),
+.auth-submit:hover:not(:disabled) {
+  border-color: #19564f;
+  background: #19564f;
+  color: #fff;
+}
+
+.sidebar-workspace,
+.sidebar-tip,
+.navbar-logout-button,
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.shared-file-card,
+.notification-card,
+.chat-card,
+.activity-card,
+.auth-feature-card,
+.auth-card,
+.public-project-card,
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty,
+.dashboard-pulse,
+.page-insights {
+  border-color: #d7e2df;
+  background-color: #f2f6f4;
+  color: #263a3b;
+  box-shadow: 0 3px 12px rgb(37 66 63 / 6%);
+}
+
+.dashboard-welcome {
+  border-color: #d1e0db;
+  background:
+    radial-gradient(ellipse at 92% 0, rgb(149 194 181 / 35%), transparent 38%),
+    linear-gradient(110deg, #f2f7f4 0%, #e6efeb 100%);
+}
+
+.dashboard-welcome h1,
+.welcome-copy h1,
+.notes-header h1,
+.team-header h1,
+.files-heading h1,
+.notifications-heading h1,
+.chat-header h1,
+.activity-header h1,
+.projects-header h1,
+.auth-card h1,
+.dashboard-section-heading h2,
+.dashboard-panel-heading h2,
+.dashboard-stat-card > strong,
+.dashboard-project-info strong,
+.dashboard-quick-action strong,
+.page-insights article strong,
+.page-guide-copy h2,
+.auth-feature-card strong,
+.auth-preview-title strong,
+.auth-preview-progress strong {
+  color: #263a3b;
+}
+
+.dashboard-eyebrow,
+.notes-eyebrow,
+.team-eyebrow,
+.files-eyebrow,
+.notifications-eyebrow,
+.page-kicker,
+.projects-header .eyebrow,
+.auth-showcase-kicker {
+  color: #34776e;
+}
+
+.dashboard-welcome .welcome-copy > p,
+.notes-header p,
+.team-header p,
+.files-heading p,
+.notifications-heading p,
+.chat-header p,
+.activity-header p,
+.projects-header p,
+.dashboard-section-heading p,
+.dashboard-panel-heading p,
+.dashboard-stat-top,
+.dashboard-stat-card > p,
+.dashboard-project-info span,
+.dashboard-quick-action small,
+.page-insights article small,
+.page-insights > p,
+.page-guide-copy p,
+.page-guide-label,
+.auth-subtitle,
+.auth-footer,
+.auth-feature-card small,
+.auth-showcase-copy > p,
+.auth-preview-top,
+.auth-preview-title > div:nth-child(2) > span,
+.auth-preview-progress > div,
+.auth-preview-message,
+.auth-showcase-footnote {
+  color: #718382;
+}
+
+.navbar-link {
+  color: #506564;
+}
+
+.navbar-link:hover,
+.navbar-link.active,
+.navbar-logout-button:hover {
+  border-color: #c9dcd5;
+  background: #d8e8e1;
+  color: #19564f;
+}
+
+.navbar-link.active {
+  box-shadow: inset 2px 0 #236b63;
+}
+
+.navbar-account,
+.dashboard-project-row,
+.dashboard-quick-action,
+.team-person,
+.chat-room-title,
+.chat-compose {
+  border-color: #d7e2df;
+}
+
+.dashboard-button-outline,
+.dashboard-refresh,
+.team-refresh,
+.files-refresh,
+.navbar-logout-button {
+  border-color: #cfddd8;
+  background: #edf3f0;
+  color: #4f6965;
+}
+
+.dashboard-page .page-guide,
+.page-guide,
+.page-guide-projects,
+.page-guide-files,
+.page-guide-activity,
+.page-guide-chat {
+  border-left-color: #4d9184;
+  background: #e1eee8;
+}
+
+.page-guide-notes,
+.page-guide-team,
+.dashboard-tip {
+  border-color: #d8e2da;
+  background: #eaf1e9;
+}
+
+.page-guide-notifications {
+  border-left-color: #a88955;
+  background: #f1eee4;
+}
+
+.project-card,
+.project-card:nth-child(3n + 2),
+.project-card:nth-child(3n),
+.note-card {
+  border-top-color: #4d9184;
+  background: #f2f6f4;
+}
+
+.project-card:nth-child(3n + 2),
+.note-card:nth-child(3n + 2) {
+  border-top-color: #8a9b82;
+  background: #edf3ed;
+}
+
+.project-card:nth-child(3n),
+.note-card:nth-child(3n) {
+  border-top-color: #a88955;
+  background: #f2f0e7;
+}
+
+.file-upload-form {
+  border-color: #c7d9d2;
+  background: #e9f1ed;
+  color: #405d58;
+}
+
+.notification-card.unread {
+  border-left-color: #a88955;
+  background: #f2f0e7;
+}
+
+.activity-list::before {
+  background: #c7d8d1;
+}
+
+.activity-card {
+  border-left-color: #4d9184;
+}
+
+.activity-card::before {
+  border-color: #e8efec;
+  background: #34776e;
+  box-shadow: 0 0 0 1px #b7cdc4;
+}
+
+.chat-messages {
+  background: #e8efec;
+}
+
+.chat-message,
+.chat-message:nth-child(even) {
+  border-color: #d7e2df;
+  background: #f7f9f7;
+  color: #344a49;
+}
+
+.auth-page {
+  background:
+    radial-gradient(ellipse at 10% 0, rgb(161 199 185 / 42%), transparent 34rem),
+    #e8efec;
+}
+
+.auth-showcase,
+.auth-showcase-copy h2 {
+  color: #263a3b;
+}
+
+.auth-preview,
+.auth-card,
+.auth-feature-card,
+.auth-feature-card:nth-child(2),
+.auth-feature-card:nth-child(3) {
+  border-color: #d7e2df;
+  background: #f2f6f4;
+}
+
+.auth-preview-track {
+  background: #d8e4df;
+}
+
+.auth-preview-track > span,
+.auth-preview-dot {
+  background: #34776e;
+}
+
+.auth-preview-online {
+  color: #5b866d;
+}
+
+.auth-form label {
+  color: #405957;
+}
+
+.auth-form input,
+.password-field,
+input,
+textarea,
+select {
+  border-color: #cbdad4;
+  background-color: #f7f9f7;
+  color: #263a3b;
+}
+
+.auth-form input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #84938e;
+}
+
+.auth-form input:focus,
+.password-field:focus-within,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #5b968a;
+  box-shadow: 0 0 0 3px rgb(35 107 99 / 12%);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: rgb(35 107 99 / 45%);
+}
+
+.app-footer {
+  background: #244641;
+  color: #f2f6f4;
+}
+
+.footer-brand > span:last-child > span,
+.footer-column-title {
+  color: #c5d8c2;
+}
+
+.footer-brand-column > p,
+.footer-link-column > a,
+.footer-footer-note p,
+.footer-status {
+  color: #c2d2cc;
+}
+
+.footer-bottom {
+  border-color: rgb(242 246 244 / 16%);
+  color: #aabeb7;
+}
+
+.footer-bottom > a {
+  color: #e2ece7;
+}
+
+.footer-bottom > span:nth-child(2) svg {
+  color: #cbb681;
+}
+
+.footer-link-column > a:hover,
+.footer-bottom > a:hover {
+  color: #d1e5d8;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .dashboard-stat-card:hover,
+  .dashboard-projects-panel:hover,
+  .dashboard-quick-panel:hover,
+  .project-card:hover,
+  .project-summary:hover,
+  .note-card:hover,
+  .team-panel:hover,
+  .team-add-panel:hover,
+  .files-panel:hover,
+  .files-list-section:hover,
+  .shared-file-card:hover,
+  .notification-card:hover,
+  .chat-card:hover,
+  .activity-card:hover,
+  .page-guide:hover,
+  .auth-feature-card:hover,
+  .auth-card:hover,
+  .public-project-card:hover {
+    border-color: #b9d1c8;
+    box-shadow: 0 7px 18px rgb(37 66 63 / 10%);
+  }
+}
+
+:root {
+  --color-primary: #665b9e;
+  --color-primary-dark: #51477f;
+  --color-accent: #ad8958;
+  --color-ink: #303144;
+  --color-muted: #77788a;
+  --color-border: #dcdce8;
+  --color-surface: #f5f4f8;
+  --shadow-card: 0 3px 12px rgb(47 44 77 / 6%);
+}
+
+body,
+.app-shell,
+.app-main,
+.dashboard-page,
+.projects-page,
+.notes-page,
+.team-page,
+.files-page,
+.notifications-page,
+.activity-page,
+.chat-page,
+.public-project-page {
+  color: #303144;
+  background: #e9e9f0;
+}
+
+.app-navbar.is-guest,
+.app-navbar.is-authenticated {
+  border-color: #d9d9e5;
+  background: #e2e2eb;
+}
+
+.app-navbar.is-guest .navbar-brand,
+.app-navbar.is-guest .navbar-login-link,
+.app-navbar.is-authenticated .navbar-brand,
+.navbar-user-name,
+.workspace-copy strong,
+.sidebar-tip strong {
+  color: #303144;
+}
+
+.app-navbar.is-guest .navbar-brand > span:last-child > span,
+.app-navbar.is-authenticated .navbar-brand > span:last-child > span,
+.auth-showcase-copy h2 span,
+.auth-footer a {
+  color: #665b9e;
+}
+
+.app-navbar.is-guest .guest-nav-message,
+.navbar-group-label,
+.workspace-copy small,
+.navbar-user-copy small,
+.dashboard-welcome .welcome-copy > p,
+.notes-header p,
+.team-header p,
+.files-heading p,
+.notifications-heading p,
+.chat-header p,
+.activity-header p,
+.projects-header p,
+.dashboard-section-heading p,
+.dashboard-panel-heading p,
+.dashboard-stat-top,
+.dashboard-stat-card > p,
+.dashboard-project-info span,
+.dashboard-quick-action small,
+.page-insights article small,
+.page-insights > p,
+.page-guide-copy p,
+.page-guide-label,
+.auth-subtitle,
+.auth-footer,
+.auth-feature-card small,
+.auth-showcase-copy > p,
+.auth-preview-top,
+.auth-preview-title > div:nth-child(2) > span,
+.auth-preview-progress > div,
+.auth-preview-message,
+.auth-showcase-footnote {
+  color: #77788a;
+}
+
+.app-navbar.is-guest .navbar-logo,
+.app-navbar.is-authenticated .navbar-logo,
+.auth-logo,
+.footer-brand-icon,
+.workspace-avatar,
+.sidebar-tip-icon,
+.navbar-avatar,
+.dashboard-stat-icon,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.page-insight-icon,
+.project-card-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.notification-icon,
+.shared-file-icon,
+.files-heading-icon,
+.chat-header-icon,
+.auth-feature-icon,
+.auth-preview-project-icon {
+  background: #e5e2f1;
+  color: #655a9c;
+}
+
+.app-navbar.is-guest .navbar-register-button,
+.dashboard-button,
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.auth-submit {
+  border-color: #665b9e;
+  background: #665b9e;
+  color: #fff;
+}
+
+.app-navbar.is-guest .navbar-register-button:hover,
+.dashboard-button:hover,
+.primary-button:hover,
+.notes-primary-button:hover:not(:disabled),
+.team-add-button:hover:not(:disabled),
+.notifications-mark-all:hover:not(:disabled),
+.chat-compose button:hover:not(:disabled),
+.file-upload-form button:hover:not(:disabled),
+.auth-submit:hover:not(:disabled) {
+  border-color: #51477f;
+  background: #51477f;
+  color: #fff;
+}
+
+.sidebar-workspace,
+.sidebar-tip,
+.navbar-logout-button,
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.shared-file-card,
+.notification-card,
+.chat-card,
+.activity-card,
+.auth-feature-card,
+.auth-card,
+.public-project-card,
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty,
+.dashboard-pulse,
+.page-insights {
+  border-color: #dcdce8;
+  background-color: #f5f4f8;
+  color: #303144;
+  box-shadow: 0 3px 12px rgb(47 44 77 / 6%);
+}
+
+.dashboard-welcome {
+  border-color: #d8d6e6;
+  background:
+    radial-gradient(ellipse at 92% 0, rgb(177 169 214 / 34%), transparent 38%),
+    linear-gradient(110deg, #f4f3f8 0%, #e8e7f0 100%);
+}
+
+.dashboard-welcome::after {
+  border-color: rgb(102 91 158 / 12%);
+  box-shadow: 0 0 0 30px rgb(102 91 158 / 4%), 0 0 0 60px rgb(102 91 158 / 2%);
+}
+
+.dashboard-welcome h1,
+.welcome-copy h1,
+.notes-header h1,
+.team-header h1,
+.files-heading h1,
+.notifications-heading h1,
+.chat-header h1,
+.activity-header h1,
+.projects-header h1,
+.auth-card h1,
+.dashboard-section-heading h2,
+.dashboard-panel-heading h2,
+.dashboard-stat-card > strong,
+.dashboard-project-info strong,
+.dashboard-quick-action strong,
+.page-insights article strong,
+.page-guide-copy h2,
+.auth-feature-card strong,
+.auth-preview-title strong,
+.auth-preview-progress strong {
+  color: #303144;
+}
+
+.dashboard-eyebrow,
+.notes-eyebrow,
+.team-eyebrow,
+.files-eyebrow,
+.notifications-eyebrow,
+.page-kicker,
+.projects-header .eyebrow,
+.auth-showcase-kicker {
+  color: #70669f;
+}
+
+.navbar-link {
+  color: #5e5e72;
+}
+
+.navbar-link:hover,
+.navbar-link.active,
+.navbar-logout-button:hover {
+  border-color: #d5d2e6;
+  background: #e5e2f1;
+  color: #51477f;
+}
+
+.navbar-link.active {
+  box-shadow: inset 2px 0 #665b9e;
+}
+
+.sidebar-workspace,
+.sidebar-tip,
+.navbar-logout-button,
+.dashboard-button-outline,
+.dashboard-refresh,
+.team-refresh,
+.files-refresh {
+  border-color: #d8d8e4;
+  background: #f0eff5;
+}
+
+.dashboard-button-outline,
+.dashboard-refresh,
+.team-refresh,
+.files-refresh,
+.navbar-logout-button {
+  color: #5d5c72;
+}
+
+.dashboard-button-outline:hover,
+.dashboard-refresh:hover,
+.team-refresh:hover,
+.files-refresh:hover {
+  background: #e5e3ef;
+  color: #51477f;
+}
+
+.navbar-account,
+.dashboard-project-row,
+.dashboard-quick-action,
+.team-person,
+.chat-room-title,
+.chat-compose {
+  border-color: #dcdce8;
+}
+
+.dashboard-page .page-guide,
+.page-guide,
+.page-guide-projects,
+.page-guide-files,
+.page-guide-activity,
+.page-guide-chat {
+  border-left-color: #8175b3;
+  background: #e8e6f1;
+}
+
+.page-guide-notes,
+.page-guide-team,
+.dashboard-tip {
+  border-color: #e0dce8;
+  background: #eeebf2;
+}
+
+.page-guide-notifications {
+  border-left-color: #ad8958;
+  background: #f1eee6;
+}
+
+.dashboard-tip p {
+  color: #777181;
+}
+
+.project-card,
+.project-card:nth-child(3n + 2),
+.project-card:nth-child(3n),
+.note-card {
+  border-top-color: #8175b3;
+  background: #f5f4f8;
+}
+
+.project-card:nth-child(3n + 2),
+.note-card:nth-child(3n + 2) {
+  border-top-color: #8d92a8;
+  background: #f0f0f5;
+}
+
+.project-card:nth-child(3n),
+.note-card:nth-child(3n) {
+  border-top-color: #ad8958;
+  background: #f3f0e9;
+}
+
+.file-upload-form {
+  border-color: #d3d2e0;
+  background: #eeedf4;
+  color: #4d4d64;
+}
+
+.notification-card.unread {
+  border-left-color: #ad8958;
+  background: #f3f0e9;
+}
+
+.activity-list::before {
+  background: #d0cfdd;
+}
+
+.activity-card {
+  border-left-color: #8175b3;
+}
+
+.activity-card::before {
+  border-color: #e9e9f0;
+  background: #70669f;
+  box-shadow: 0 0 0 1px #c3c0d5;
+}
+
+.chat-messages {
+  background: #e9e9f0;
+}
+
+.chat-message,
+.chat-message:nth-child(even) {
+  border-color: #dcdce8;
+  background: #f7f6fa;
+  color: #3e3e53;
+}
+
+.auth-page {
+  background:
+    radial-gradient(ellipse at 10% 0, rgb(180 174 213 / 40%), transparent 34rem),
+    #e9e9f0;
+}
+
+.auth-showcase,
+.auth-showcase-copy h2 {
+  color: #303144;
+}
+
+.auth-preview,
+.auth-card,
+.auth-feature-card,
+.auth-feature-card:nth-child(2),
+.auth-feature-card:nth-child(3) {
+  border-color: #dcdce8;
+  background: #f5f4f8;
+}
+
+.auth-preview-track {
+  background: #dfdeeb;
+}
+
+.auth-preview-track > span,
+.auth-preview-dot {
+  background: #70669f;
+}
+
+.auth-preview-online {
+  color: #658371;
+}
+
+.auth-form label {
+  color: #4e4e63;
+}
+
+.auth-form input,
+.password-field,
+input,
+textarea,
+select {
+  border-color: #d1d1df;
+  background-color: #faf9fc;
+  color: #303144;
+}
+
+.auth-form input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #88889a;
+}
+
+.auth-form input:focus,
+.password-field:focus-within,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #8b80b8;
+  box-shadow: 0 0 0 3px rgb(102 91 158 / 12%);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: rgb(102 91 158 / 45%);
+}
+
+.app-footer {
+  background: #343247;
+  color: #f5f4f8;
+}
+
+.footer-brand > span:last-child > span,
+.footer-column-title {
+  color: #c9c3e0;
+}
+
+.footer-brand-column > p,
+.footer-link-column > a,
+.footer-footer-note p,
+.footer-status {
+  color: #c9c8d5;
+}
+
+.footer-bottom {
+  border-color: rgb(245 244 248 / 16%);
+  color: #aaa9bb;
+}
+
+.footer-bottom > a {
+  color: #e5e4ee;
+}
+
+.footer-bottom > span:nth-child(2) svg {
+  color: #d2bd91;
+}
+
+.footer-link-column > a:hover,
+.footer-bottom > a:hover {
+  color: #d9d4ed;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .dashboard-stat-card:hover,
+  .dashboard-projects-panel:hover,
+  .dashboard-quick-panel:hover,
+  .project-card:hover,
+  .project-summary:hover,
+  .note-card:hover,
+  .team-panel:hover,
+  .team-add-panel:hover,
+  .files-panel:hover,
+  .files-list-section:hover,
+  .shared-file-card:hover,
+  .notification-card:hover,
+  .chat-card:hover,
+  .activity-card:hover,
+  .page-guide:hover,
+  .auth-feature-card:hover,
+  .auth-card:hover,
+  .public-project-card:hover {
+    border-color: #c0bdd6;
+    box-shadow: 0 7px 18px rgb(47 44 77 / 10%);
+  }
+}

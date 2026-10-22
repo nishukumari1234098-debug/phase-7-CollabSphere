@@ -1,0 +1,682 @@
+html {
+  min-width: 320px;
+  overflow-x: clip;
+  scroll-padding-top: 12px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+#root,
+.app-shell,
+.app-main {
+  min-width: 0;
+}
+
+.app-shell {
+  width: 100%;
+}
+
+body {
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.app-navbar {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.navbar-links {
+  max-width: 100%;
+}
+
+.notes-header > div,
+.team-header > div,
+.projects-header > div,
+.files-heading > div:first-child,
+.notifications-heading > div,
+.activity-header > div:first-child,
+.chat-header > div:last-child,
+.dashboard-section-heading > div,
+.dashboard-panel-heading > div,
+.activity-feed-heading > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.notes-header p,
+.team-header p,
+.projects-header p,
+.files-heading p,
+.notifications-heading p,
+.activity-header p,
+.chat-header p,
+.dashboard-section-heading p,
+.dashboard-panel-heading p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1180px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(250px, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .app-shell.has-sidebar .app-main {
+    margin-left: 0;
+  }
+
+  .app-main {
+    min-height: calc(100vh - 110px);
+    min-height: calc(100dvh - 110px);
+  }
+
+  .app-navbar.is-authenticated {
+    position: sticky;
+    top: 0;
+    inset: auto;
+    z-index: 100;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: min(42vh, 280px);
+    overflow: visible;
+  }
+
+  .navbar-links {
+    order: 3;
+    flex: 0 0 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .navbar-account {
+    top: 10px;
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .auth-page {
+    min-height: calc(100vh - 110px);
+    min-height: calc(100dvh - 110px);
+  }
+}
+
+@media (max-width: 760px) {
+  .dashboard-page,
+  .projects-page,
+  .team-page,
+  .notes-page,
+  .files-page,
+  .notifications-page,
+  .activity-page,
+  .chat-page {
+    padding: 22px 16px;
+  }
+
+  .dashboard-welcome {
+    min-height: 0;
+  }
+
+  .welcome-art {
+    width: 180px;
+    flex-basis: 180px;
+    transform: scale(0.82);
+    transform-origin: center right;
+  }
+
+  .projects-header,
+  .notes-header,
+  .team-header,
+  .files-heading,
+  .notifications-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .projects-header > div,
+  .notes-header > div,
+  .team-header > div,
+  .files-heading > div:first-child,
+  .notifications-heading > div {
+    flex: 1 1 100%;
+  }
+
+  .projects-header > .primary-button,
+  .notes-header > .notes-primary-button,
+  .notifications-mark-all,
+  .team-refresh {
+    flex-shrink: 0;
+  }
+
+  .files-heading-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    opacity: 0.7;
+  }
+
+  .projects-grid,
+  .notes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+
+  .activity-reading-guide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .activity-reading-points {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  }
+
+  .chat-side-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .app-navbar.is-authenticated {
+    padding: 10px 12px 8px;
+  }
+
+  .is-authenticated .navbar-brand {
+    font-size: 15px;
+  }
+
+  .navbar-account {
+    top: 9px;
+    right: 12px;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 7px 0 1px;
+    overflow: visible;
+  }
+
+  .navbar-nav-group {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    gap: 2px;
+  }
+
+  .navbar-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 48px;
+    gap: 3px;
+    padding: 5px 2px;
+    font-size: 9px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .navbar-link span {
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-page,
+  .projects-page,
+  .team-page,
+  .notes-page,
+  .files-page,
+  .notifications-page,
+  .activity-page,
+  .chat-page {
+    padding: 18px 12px;
+  }
+
+  .dashboard-welcome {
+    padding: 25px 20px;
+    border-radius: 21px;
+  }
+
+  .welcome-copy h1 {
+    font-size: clamp(27px, 8vw, 34px);
+    letter-spacing: -1px;
+  }
+
+  .welcome-copy > p {
+    font-size: 14px;
+  }
+
+  .welcome-actions {
+    gap: 8px;
+  }
+
+  .dashboard-button {
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .dashboard-stat-card {
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .dashboard-stat-card > strong {
+    font-size: 28px;
+  }
+
+  .dashboard-section-heading,
+  .dashboard-panel-heading,
+  .activity-feed-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-projects-panel,
+  .dashboard-quick-panel,
+  .team-panel,
+  .team-add-panel,
+  .files-panel,
+  .files-list-section {
+    min-width: 0;
+    padding: 17px;
+  }
+
+  .dashboard-project-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dashboard-project-role {
+    margin-left: 55px;
+  }
+
+  .projects-grid,
+  .notes-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .projects-header,
+  .notes-header,
+  .team-header,
+  .notifications-heading {
+    flex-direction: column;
+  }
+
+  .projects-header > .primary-button,
+  .notes-header > .notes-primary-button,
+  .team-refresh,
+  .notifications-mark-all {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .project-card,
+  .note-card {
+    padding: 18px;
+  }
+
+  .project-modal-backdrop,
+  .notes-modal-backdrop {
+    align-items: start;
+    padding: max(10px, env(safe-area-inset-top)) 10px
+      max(10px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+  }
+
+  .project-form,
+  .notes-form,
+  .notes-editor-form {
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 18px;
+    border-radius: 17px;
+  }
+
+  .project-sharing-actions,
+  .markdown-toolbar,
+  .gemini-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .project-share-toggle,
+  .project-copy-link,
+  .markdown-toolbar button,
+  .gemini-actions button {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .team-person {
+    align-items: flex-start;
+  }
+
+  .team-role {
+    margin-left: 58px;
+  }
+
+  .team-add-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .team-add-button {
+    min-height: 44px;
+  }
+
+  .files-heading {
+    gap: 12px;
+  }
+
+  .files-heading-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .files-list-heading {
+    align-items: flex-start;
+  }
+
+  .shared-file-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-width: 0;
+    padding: 13px;
+  }
+
+  .shared-file-info {
+    flex: 1 1 calc(100% - 64px);
+    min-width: 0;
+  }
+
+  .file-card-actions {
+    width: 100%;
+  }
+
+  .file-card-actions > button,
+  .file-download-button {
+    flex: 1 1 auto;
+    min-height: 42px;
+    margin-left: 0;
+  }
+
+  .file-preview-backdrop {
+    align-items: start;
+    padding: max(8px, env(safe-area-inset-top)) 8px
+      max(8px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+  }
+
+  .file-preview-modal {
+    width: 100%;
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .file-preview-header,
+  .file-preview-footer {
+    padding: 12px;
+  }
+
+  .file-preview-body {
+    min-height: 160px;
+    padding: 10px;
+  }
+
+  .file-preview-body iframe {
+    height: 58dvh;
+  }
+
+  .activity-header {
+    gap: 14px;
+    padding: 21px 17px;
+  }
+
+  .activity-header h1,
+  .projects-header h1,
+  .notes-header h1,
+  .team-header h1,
+  .notifications-heading h1 {
+    font-size: clamp(25px, 7vw, 31px);
+    overflow-wrap: anywhere;
+  }
+
+  .activity-header-actions {
+    width: 100%;
+  }
+
+  .activity-header-actions button {
+    flex: 1 1 140px;
+    min-height: 42px;
+  }
+
+  .activity-filter {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .activity-filter select,
+  .team-project-select,
+  .notes-project-select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .activity-feed {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .activity-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .chat-header {
+    gap: 10px;
+    padding: 19px 16px;
+  }
+
+  .chat-header-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .chat-header h1 {
+    font-size: 23px;
+  }
+
+  .chat-project-select,
+  .chat-room-title {
+    padding-inline: 13px;
+  }
+
+  .chat-messages {
+    height: min(55vh, 480px);
+    height: min(55dvh, 480px);
+    min-height: 240px;
+    padding: 13px;
+  }
+
+  .chat-compose {
+    align-items: stretch;
+    gap: 7px;
+    padding: 10px;
+  }
+
+  .chat-compose input {
+    min-width: 0;
+    padding: 11px 10px;
+    font-size: 16px;
+  }
+
+  .chat-compose button {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 10px;
+  }
+
+  .auth-page {
+    align-content: start;
+    gap: 15px;
+    min-height: calc(100vh - 62px);
+    min-height: calc(100dvh - 62px);
+    padding: 18px 12px max(24px, env(safe-area-inset-bottom));
+  }
+
+  .auth-showcase {
+    padding-top: 35px;
+  }
+
+  .auth-showcase-copy h2 {
+    font-size: clamp(34px, 10vw, 43px);
+    letter-spacing: -1.7px;
+  }
+
+  .auth-showcase-copy > p {
+    font-size: 14px;
+  }
+
+  .auth-card {
+    padding: 23px 18px;
+    border-radius: 20px;
+  }
+
+  .auth-form input,
+  .project-form input,
+  .project-form textarea,
+  .notes-form input,
+  .notes-form textarea,
+  .team-email-field input,
+  .files-panel select,
+  .file-upload-form input,
+  .chat-project-select select,
+  .activity-filter select {
+    font-size: 16px;
+  }
+
+  .public-project-page {
+    place-items: start center;
+    min-height: calc(100vh - 62px);
+    padding: 16px 12px;
+  }
+
+  .public-project-card {
+    padding: 22px 18px;
+    border-radius: 17px;
+  }
+
+  .notification-card {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .notification-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-main {
+    gap: 20px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-navbar.is-guest {
+    gap: 5px;
+    padding-inline: 9px;
+  }
+
+  .app-navbar.is-guest .navbar-brand {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .app-navbar.is-guest .navbar-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar-auth-actions {
+    gap: 2px;
+  }
+
+  .navbar-auth-button,
+  .navbar-login-link {
+    gap: 4px;
+    padding-inline: 6px;
+    font-size: 9px;
+  }
+
+  .navbar-register-button svg:last-child {
+    display: none;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-project-role,
+  .team-role {
+    margin-left: 0;
+  }
+
+  .team-person {
+    gap: 10px;
+  }
+
+  .team-person-info {
+    flex-basis: calc(100% - 56px);
+  }
+
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-brand-column {
+    grid-column: auto;
+  }
+}
+
+@media (max-height: 540px) and (max-width: 900px) {
+  .app-navbar.is-authenticated {
+    max-height: none;
+  }
+
+  .auth-page {
+    align-content: start;
+  }
+
+  .auth-showcase {
+    padding-top: 10px;
+  }
+
+  .auth-showcase-copy h2 {
+    margin-block: 10px;
+  }
+}

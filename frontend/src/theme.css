@@ -1,0 +1,2667 @@
+:root {
+  --color-primary: #766a9f;
+  --color-primary-dark: #5d527f;
+  --color-accent: #a8c4b3;
+  --color-ink: #302e40;
+  --color-muted: #777588;
+  --color-border: #e7e4ed;
+  --color-surface: #fffefa;
+  --shadow-card: 0 14px 38px rgb(45 39 67 / 7%);
+}
+
+body {
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse at 3% 0%, rgb(224 218 240 / 55%), transparent 30rem),
+    radial-gradient(ellipse at 96% 10%, rgb(220 235 228 / 60%), transparent 29rem),
+    #f6f5f8;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: rgb(118 106 159 / 38%);
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  background: transparent;
+}
+
+.app-shell.has-sidebar .app-main {
+  margin-left: 254px;
+}
+
+.app-loading {
+  color: var(--color-ink);
+}
+
+.app-navbar,
+.app-navbar.is-guest {
+  background: #29283d;
+  color: #fbfaff;
+}
+
+.app-navbar.is-guest {
+  border-color: rgb(255 255 255 / 8%);
+  box-shadow: 0 7px 24px rgb(37 35 57 / 12%);
+}
+
+.app-navbar.is-authenticated {
+  background:
+    radial-gradient(ellipse at 0 100%, rgb(136 124 177 / 19%), transparent 36%),
+    #29283d;
+  color: #fbfaff;
+}
+
+.navbar-brand,
+.is-authenticated .navbar-brand {
+  color: #fbfaff;
+}
+
+.navbar-brand > span:last-child > span {
+  color: #c4b8eb;
+}
+
+.navbar-logo,
+.footer-brand-icon {
+  background: linear-gradient(145deg, #d7cffa, #a99bda);
+  color: #39334e;
+  box-shadow: 0 7px 17px rgb(12 11 25 / 24%);
+}
+
+.guest-nav-message,
+.workspace-copy small,
+.navbar-user-copy small {
+  color: #b8b6c7;
+}
+
+.navbar-login-link {
+  color: #eeedf4;
+}
+
+.navbar-register-button,
+.navbar-logout-button {
+  border-color: #c8bfdf;
+  background: #c5b9e8;
+  color: #302b45;
+  box-shadow: 0 5px 15px rgb(8 8 23 / 17%);
+}
+
+.navbar-register-button:hover,
+.navbar-logout-button:hover {
+  background: #ddd6f2;
+  color: #302b45;
+}
+
+.workspace-avatar,
+.navbar-avatar,
+.sidebar-tip-icon {
+  border-color: rgb(201 190 238 / 30%);
+  background: rgb(201 190 238 / 13%);
+  color: #d3c8f4;
+}
+
+.workspace-copy strong,
+.navbar-user-name {
+  color: #fbfaff;
+}
+
+.workspace-copy small i,
+.nav-live-dot {
+  background: #a8cbb8;
+  box-shadow: 0 0 9px rgb(168 203 184 / 55%);
+}
+
+.navbar-group-label {
+  color: #a9a6bb;
+}
+
+.navbar-link {
+  color: #c4c2d1;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  background: rgb(255 255 255 / 8%);
+  color: #d5caf5;
+}
+
+.navbar-link.active {
+  border-color: rgb(203 192 239 / 20%);
+  box-shadow: inset 3px 0 #b9aadd;
+}
+
+.sidebar-tip {
+  border-color: rgb(203 192 239 / 18%);
+  background: linear-gradient(135deg, rgb(203 192 239 / 11%), rgb(255 255 255 / 3%));
+}
+
+.sidebar-tip strong {
+  color: #f1effa;
+}
+
+.sidebar-tip p {
+  color: #bfbdcc;
+}
+
+.navbar-logout-button {
+  color: #dfdce9;
+}
+
+.navbar-logout-button:hover {
+  background: rgb(255 255 255 / 9%);
+  color: #d5caf5;
+}
+
+.dashboard-page,
+.projects-page,
+.notes-page,
+.team-page,
+.files-page,
+.notifications-page,
+.activity-page,
+.chat-page {
+  color: var(--color-ink);
+}
+
+.dashboard-welcome,
+.notes-header,
+.team-header,
+.files-heading,
+.notifications-heading,
+.chat-header,
+.activity-header {
+  border-color: #e8e3f0;
+  background:
+    radial-gradient(ellipse at 91% 5%, rgb(218 231 225 / 83%), transparent 40%),
+    radial-gradient(ellipse at 0 100%, rgb(224 218 241 / 88%), transparent 43%),
+    linear-gradient(115deg, #f0edf8, #eff4f1);
+  color: var(--color-ink);
+  box-shadow: 0 16px 40px rgb(57 47 82 / 8%);
+}
+
+.dashboard-welcome::after,
+.notes-header::after,
+.team-header::after,
+.files-heading::after,
+.notifications-heading::after,
+.chat-header::after {
+  border-color: rgb(118 106 159 / 13%);
+  box-shadow: 0 0 0 30px rgb(118 106 159 / 4%), 0 0 0 65px rgb(118 106 159 / 3%);
+}
+
+.dashboard-welcome h1,
+.notes-header h1,
+.team-header h1,
+.files-heading h1,
+.notifications-heading h1,
+.chat-header h1,
+.activity-header h1 {
+  color: #302e40;
+}
+
+.dashboard-eyebrow,
+.notes-eyebrow,
+.team-eyebrow,
+.files-eyebrow,
+.notifications-eyebrow,
+.page-kicker {
+  color: #766a9f;
+}
+
+.dashboard-welcome .welcome-copy > p,
+.notes-header p,
+.team-header p,
+.files-heading p,
+.notifications-heading p,
+.chat-header p,
+.activity-header p {
+  color: #6e6b7e;
+}
+
+.dashboard-button-light {
+  background: #766a9f;
+  color: #fff;
+  box-shadow: 0 7px 17px rgb(91 78 130 / 17%);
+}
+
+.dashboard-button-light:hover {
+  background: #665a8d;
+}
+
+.dashboard-button-outline {
+  border-color: #d5d0e2;
+  background: rgb(255 255 255 / 66%);
+  color: #5d527f;
+}
+
+.dashboard-button-outline:hover {
+  background: white;
+}
+
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.notification-card,
+.chat-card,
+.activity-card {
+  border-color: #e8e5ed;
+  background: #fffefa;
+  box-shadow: 0 10px 30px rgb(45 39 67 / 5%);
+}
+
+.dashboard-stat-card,
+.project-card,
+.note-card,
+.notification-card,
+.team-panel,
+.files-panel,
+.chat-card {
+  border-radius: 18px;
+}
+
+.dashboard-stat-card:hover,
+.project-card:hover,
+.note-card:hover,
+.notification-card:hover {
+  border-color: #cbc2e2;
+  box-shadow: 0 15px 34px rgb(82 69 117 / 10%);
+}
+
+.dashboard-stat-icon.purple,
+.dashboard-stat-icon.blue,
+.dashboard-stat-icon.green,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.project-card-icon,
+.empty-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.team-avatar,
+.team-avatar.member-avatar,
+.notification-icon,
+.shared-file-icon,
+.page-insight-icon {
+  background: #efedf7;
+  color: #75699d;
+}
+
+.dashboard-stat-icon.blue,
+.quick-blue {
+  background: #edf0f7;
+  color: #687a9a;
+}
+
+.dashboard-stat-icon.green,
+.quick-green {
+  background: #eaf2ed;
+  color: #62836f;
+}
+
+.dashboard-text-link,
+.dashboard-inline-link,
+.tip-heading,
+.eyebrow,
+.notes-eyebrow,
+.team-eyebrow,
+.files-eyebrow,
+.dashboard-refresh,
+.team-refresh,
+.files-refresh,
+.file-download-button,
+.file-preview-button,
+.chat-sender,
+.chat-room-title svg,
+.public-project-back,
+.notification-content button {
+  color: #706493;
+}
+
+.dashboard-project-role.is-owner,
+.owner-badge,
+.team-role.owner-role,
+.public-project-badge {
+  background: #efedf7;
+  color: #685d8c;
+}
+
+.dashboard-tip {
+  border-color: #e6dfef;
+  background: linear-gradient(135deg, #f7f4fb, #f3f6f2);
+}
+
+.dashboard-tip .tip-heading {
+  color: #6c608f;
+}
+
+.dashboard-pulse,
+.page-insights {
+  border-color: #e8e5ed;
+  background: linear-gradient(110deg, #fffefa, #f7f6fa);
+  box-shadow: 0 8px 24px rgb(45 39 67 / 4%);
+}
+
+.pulse-indicator {
+  background: #82a992;
+  box-shadow: 0 0 0 5px #e9f1eb;
+}
+
+.pulse-metric,
+.pulse-link {
+  color: #706493;
+}
+
+.page-insights article strong {
+  color: #302e40;
+}
+
+.page-insights article small,
+.page-insights > p {
+  color: #777588;
+}
+
+.page-insights > p {
+  border-color: #e4e1ea;
+}
+
+.page-guide {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(180px, 0.7fr);
+  align-items: center;
+  gap: 17px;
+  margin: 0 0 24px;
+  padding: 18px 20px;
+  overflow: hidden;
+  border: 1px solid #e5e1ed;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(220 232 224 / 50%), transparent 42%),
+    linear-gradient(110deg, #fffefa, #f8f6fb);
+  box-shadow: 0 8px 24px rgb(45 39 67 / 4%);
+}
+
+.page-guide::after {
+  position: absolute;
+  top: -38px;
+  right: 20%;
+  width: 110px;
+  height: 110px;
+  border: 1px solid rgb(118 106 159 / 10%);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.page-guide-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e5e0ef;
+  border-radius: 14px;
+  background: #efedf7;
+  color: #766a9f;
+}
+
+.page-guide-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.page-guide-label {
+  color: #8277a2;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.35px;
+}
+
+.page-guide-copy h2 {
+  margin: 5px 0 4px;
+  color: #373447;
+  font: 750 14px/1.35 Manrope, sans-serif;
+  letter-spacing: -0.2px;
+}
+
+.page-guide-copy p {
+  max-width: 630px;
+  margin: 0;
+  color: #777588;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.page-guide-note {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgb(226 222 235 / 80%);
+  border-radius: 12px;
+  background: rgb(255 254 250 / 75%);
+  color: #69637c;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.page-guide-note svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #8b7cad;
+}
+
+.projects-header .eyebrow {
+  color: #766a9f;
+}
+
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.activity-header-actions button:last-child {
+  background: #766a9f;
+  color: #fff;
+  box-shadow: 0 7px 17px rgb(91 78 130 / 17%);
+}
+
+.primary-button:hover,
+.notes-primary-button:hover,
+.team-add-button:hover,
+.notifications-mark-all:hover:not(:disabled),
+.chat-compose button:hover:not(:disabled),
+.file-upload-form button:hover:not(:disabled) {
+  background: #665a8d;
+  box-shadow: 0 10px 22px rgb(91 78 130 / 23%);
+}
+
+.notes-primary-button:disabled,
+.team-add-button:disabled,
+.notifications-mark-all:disabled,
+.chat-compose button:disabled,
+.file-upload-form button:disabled {
+  background: #d8d4e3;
+  box-shadow: none;
+}
+
+.project-card-bottom,
+.note-card-footer,
+.team-person,
+.team-panel-heading,
+.file-upload-form,
+.files-list-heading,
+.chat-project-select,
+.chat-room-title,
+.chat-compose {
+  border-color: #ebe8ef;
+}
+
+.role-badge,
+.team-role {
+  background: #f0eff3;
+  color: #6e6b7b;
+}
+
+.project-sharing-actions button,
+.file-download-button,
+.file-preview-button,
+.markdown-toolbar button,
+.gemini-actions button,
+.gemini-result button,
+.notes-close-button {
+  border-color: #e2deea;
+  background: #f7f5fa;
+  color: #665b8b;
+}
+
+.project-sharing-actions button:hover,
+.file-download-button:hover,
+.file-preview-button:hover {
+  background: #efedf7;
+}
+
+.notes-project-select select,
+.team-project-select select,
+.files-panel select,
+.chat-project-select select,
+.project-form input,
+.project-form textarea,
+.notes-form input,
+.notes-form textarea,
+.chat-compose input,
+.team-email-field {
+  border-color: #e2dfe8;
+  background-color: #fffefa;
+}
+
+.notes-project-select select:focus,
+.team-project-select select:focus,
+.files-panel select:focus,
+.chat-project-select select:focus,
+.project-form input:focus,
+.project-form textarea:focus,
+.notes-form input:focus,
+.notes-form textarea:focus,
+.chat-compose input:focus {
+  border-color: #9688bc;
+  box-shadow: 0 0 0 4px rgb(118 106 159 / 12%);
+}
+
+.notes-modal-backdrop,
+.project-modal-backdrop {
+  background: rgb(38 36 57 / 55%);
+  backdrop-filter: blur(7px);
+}
+
+.notes-form,
+.project-form {
+  border: 1px solid #e8e3ef;
+  border-radius: 23px;
+  background: #fffefa;
+  box-shadow: 0 28px 80px rgb(30 27 47 / 22%);
+}
+
+.gemini-tools {
+  border-color: #e6e1ed;
+  background: #f7f5fa;
+}
+
+.gemini-result {
+  background: #f0edf8;
+}
+
+.chat-room-title {
+  background: #f7f5fa;
+  color: #535164;
+}
+
+.chat-message {
+  border-color: #e8e5ed;
+  background: #f8f7fa;
+}
+
+.file-delete-button {
+  border-color: #ead5d8;
+  background: #fbf0f1;
+  color: #a85e68;
+}
+
+.notification-card.unread {
+  border-color: #d9d1eb;
+  background: #f7f5fc;
+}
+
+.notification-dot {
+  background: #8d7bb7;
+}
+
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty {
+  border-color: #e3dfeb;
+  background: linear-gradient(145deg, #fffefa, #f7f6fa);
+}
+
+.empty-projects .empty-icon {
+  background: #efedf7;
+  color: #75699d;
+}
+
+.public-project-page {
+  background:
+    radial-gradient(ellipse at 8% 0%, rgb(224 218 240 / 55%), transparent 31rem),
+    #f6f5f8;
+  color: var(--color-ink);
+}
+
+.public-project-card {
+  border-color: #e6e2ec;
+  background: #fffefa;
+  box-shadow: 0 22px 56px rgb(45 39 67 / 9%);
+}
+
+.public-project-icon,
+.public-project-back {
+  color: #766a9f;
+}
+
+.public-project-badge {
+  background: #efedf7;
+  color: #685d8c;
+}
+
+.public-project-details {
+  border-color: #e9e5ee;
+  background: #f8f7fa;
+}
+
+.public-project-details svg {
+  color: #766a9f;
+}
+
+.public-project-card .page-guide {
+  grid-template-columns: auto minmax(0, 1fr);
+  margin: 23px 0 4px;
+}
+
+.public-project-card .page-guide-note {
+  grid-column: 2;
+}
+
+.auth-page {
+  min-height: 630px;
+  background:
+    radial-gradient(ellipse at 7% 0%, rgb(220 213 240 / 67%), transparent 38%),
+    radial-gradient(ellipse at 95% 100%, rgb(216 232 222 / 75%), transparent 39%),
+    linear-gradient(130deg, #f2eff8, #eef3f0);
+}
+
+.auth-page::before,
+.auth-page::after {
+  border-color: rgb(118 106 159 / 12%);
+  box-shadow: 0 0 0 42px rgb(118 106 159 / 3%), 0 0 0 92px rgb(118 106 159 / 2%);
+}
+
+.auth-showcase {
+  color: #302e40;
+}
+
+.auth-showcase-kicker,
+.auth-showcase-copy h2 span {
+  color: #766a9f;
+}
+
+.auth-showcase-kicker > span {
+  background: #9a8abb;
+  box-shadow: 0 0 12px rgb(118 106 159 / 35%);
+}
+
+.auth-showcase-copy > p {
+  color: #6f6c7e;
+}
+
+.auth-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 620px;
+  margin-top: 23px;
+}
+
+.auth-feature-card {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 8px;
+  min-height: 116px;
+  padding: 13px;
+  border: 1px solid rgb(255 255 255 / 82%);
+  border-radius: 15px;
+  background: rgb(255 254 250 / 72%);
+  box-shadow: 0 8px 23px rgb(58 49 79 / 5%);
+  backdrop-filter: blur(10px);
+}
+
+.auth-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 10px;
+  background: #efedf7;
+  color: #766a9f;
+}
+
+.auth-feature-card strong {
+  color: #373447;
+  font-size: 11px;
+}
+
+.auth-feature-card small {
+  color: #777588;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.auth-preview {
+  border-color: rgb(255 255 255 / 88%);
+  background: rgb(255 254 250 / 82%);
+  box-shadow: 0 18px 42px rgb(57 48 78 / 10%);
+  backdrop-filter: blur(16px);
+  transform: none;
+}
+
+.auth-preview-top {
+  color: #777588;
+}
+
+.auth-preview-dot {
+  background: #8e81b3;
+}
+
+.auth-preview-online {
+  color: #718e7c;
+}
+
+.auth-preview-project-icon {
+  background: #efedf7;
+  color: #766a9f;
+}
+
+.auth-preview-title strong,
+.auth-preview-progress strong {
+  color: #373447;
+}
+
+.auth-preview-title > div:nth-child(2) > span,
+.auth-preview-progress > div {
+  color: #777588;
+}
+
+.auth-preview-title > svg:last-child {
+  color: #8b7cad;
+}
+
+.auth-preview-track {
+  background: #e9e6ef;
+}
+
+.auth-preview-track > span {
+  background: linear-gradient(90deg, #a99bca, #9fc0ab);
+}
+
+.auth-preview-avatars span {
+  border-color: #fffefa;
+  background: #e5dff2;
+  color: #53496e;
+}
+
+.auth-preview-avatars span:nth-child(2) {
+  background: #dcebe2;
+}
+
+.auth-preview-avatars span:nth-child(3) {
+  background: #e9e2da;
+}
+
+.auth-preview-avatars span:nth-child(4) {
+  background: #d8d0ed;
+}
+
+.auth-preview-message,
+.auth-showcase-footnote {
+  color: #777588;
+}
+
+.auth-card {
+  border-color: rgb(255 255 255 / 92%);
+  background: rgb(255 254 250 / 94%);
+  box-shadow: 0 24px 70px rgb(48 41 69 / 12%);
+  backdrop-filter: blur(18px);
+}
+
+.auth-card h1 {
+  color: #302e40;
+}
+
+.auth-form-brand,
+.auth-subtitle,
+.auth-footer {
+  color: #777588;
+}
+
+.auth-logo {
+  border-color: #e8e2f2;
+  background: linear-gradient(145deg, #a99bca, #8174a8);
+  color: #fff;
+  box-shadow: 0 7px 16px rgb(91 78 130 / 17%);
+}
+
+.auth-form input {
+  border-color: #e2dfe8;
+  background: #fffefa;
+  color: #302e40;
+}
+
+.auth-form input:focus,
+.password-field:focus-within {
+  border-color: #9688bc;
+  box-shadow: 0 0 0 4px rgb(118 106 159 / 12%);
+}
+
+.password-field {
+  border-color: #e2dfe8;
+  background: #fffefa;
+}
+
+.password-toggle {
+  color: #777588;
+}
+
+.auth-submit {
+  background: #766a9f;
+  color: #fff;
+  box-shadow: 0 8px 18px rgb(91 78 130 / 18%);
+}
+
+.auth-submit:hover {
+  background: #665a8d;
+  box-shadow: 0 12px 23px rgb(91 78 130 / 23%);
+}
+
+.auth-footer a {
+  color: #6d618f;
+}
+
+.auth-error {
+  border: 1px solid #efd6d8;
+  background: #fbf0f1;
+}
+
+.app-footer {
+  background:
+    radial-gradient(ellipse at 95% 0%, rgb(135 124 174 / 16%), transparent 31%),
+    #29283d;
+}
+
+.footer-brand > span:last-child > span {
+  color: #c9bee9;
+}
+
+.footer-status {
+  color: #c3d6c9;
+}
+
+.footer-status i {
+  background: #a8cbb8;
+  box-shadow: 0 0 10px rgb(168 203 184 / 42%);
+}
+
+.footer-column-title,
+.footer-bottom > span:nth-child(2) svg {
+  color: #c7b9e8;
+}
+
+.footer-link-column > a:hover,
+.footer-bottom > a:hover {
+  color: #d5caf5;
+}
+
+/* Each workspace area has its own material and depth treatment. */
+.dashboard-page {
+  position: relative;
+  perspective: 1400px;
+  background:
+    radial-gradient(ellipse at 0 10%, rgb(226 220 243 / 58%), transparent 30rem),
+    radial-gradient(ellipse at 100% 42%, rgb(216 233 225 / 52%), transparent 28rem);
+}
+
+.dashboard-welcome {
+  transform: perspective(1400px) rotateX(1.6deg);
+  transform-style: preserve-3d;
+  border: 1px solid rgb(255 255 255 / 43%);
+  background:
+    radial-gradient(ellipse at 80% 12%, rgb(195 177 239 / 34%), transparent 34%),
+    radial-gradient(ellipse at 100% 100%, rgb(132 172 152 / 29%), transparent 37%),
+    linear-gradient(120deg, #35314e, #51466e 57%, #637965);
+  box-shadow:
+    0 3px 5px rgb(40 35 61 / 10%),
+    0 18px 34px rgb(53 45 78 / 21%),
+    0 38px 65px rgb(53 45 78 / 12%),
+    inset 0 1px rgb(255 255 255 / 43%);
+}
+
+.dashboard-welcome h1,
+.dashboard-welcome .welcome-copy > p {
+  color: #fffdfc;
+}
+
+.dashboard-welcome .welcome-copy > p {
+  opacity: 0.82;
+}
+
+.dashboard-welcome .dashboard-eyebrow {
+  border-color: rgb(255 255 255 / 27%);
+  background: rgb(255 255 255 / 11%);
+  color: #e7e0f4;
+}
+
+.dashboard-welcome .dashboard-button-light {
+  background: #e6dff6;
+  color: #42385f;
+}
+
+.dashboard-welcome .dashboard-button-outline {
+  border-color: rgb(255 255 255 / 37%);
+  background: rgb(255 255 255 / 9%);
+  color: #fff;
+}
+
+.welcome-art {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.art-card {
+  transform-style: preserve-3d;
+  box-shadow:
+    0 8px 12px rgb(32 26 51 / 12%),
+    0 22px 34px rgb(32 26 51 / 22%),
+    inset 0 1px rgb(255 255 255 / 57%);
+}
+
+.art-card-front {
+  transform: rotateY(-17deg) rotateX(9deg) translateZ(18px);
+}
+
+.art-card-back {
+  transform: rotateY(19deg) rotateX(8deg) translateZ(-5px);
+}
+
+.dashboard-stat-card {
+  border-top-color: #fff;
+  background: linear-gradient(145deg, #fffefa 2%, #f5f2fb 100%);
+}
+
+.dashboard-stat-card:nth-child(2) {
+  background: linear-gradient(145deg, #fffefa 2%, #eff4f1 100%);
+}
+
+.dashboard-stat-card:nth-child(3) {
+  background: linear-gradient(145deg, #fffefa 2%, #f6f0eb 100%);
+}
+
+.dashboard-stat-card:nth-child(4) {
+  background: linear-gradient(145deg, #fffefa 2%, #eef2f7 100%);
+}
+
+.dashboard-projects-panel,
+.dashboard-quick-panel {
+  border-top-color: #fff;
+  background: linear-gradient(145deg, #fffefa, #f8f6fb);
+}
+
+.dashboard-project-row {
+  border: 1px solid #eeebf3;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #fffefa, #f8f7fa);
+  box-shadow: 0 3px 9px rgb(53 46 74 / 4%), inset 0 1px #fff;
+}
+
+.dashboard-quick-action {
+  border: 1px solid #eeebf3;
+  border-radius: 14px;
+  background: #fffefa;
+  box-shadow: 0 3px 9px rgb(53 46 74 / 4%), inset 0 1px #fff;
+}
+
+.dashboard-tip {
+  box-shadow: 0 8px 18px rgb(53 46 74 / 7%), inset 0 1px #fff;
+}
+
+.projects-page {
+  perspective: 1300px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(231 219 206 / 48%), transparent 27rem),
+    radial-gradient(ellipse at 0 65%, rgb(222 232 224 / 46%), transparent 30rem);
+}
+
+.projects-header {
+  position: relative;
+  padding: 25px 28px;
+  border: 1px solid #e9e4ed;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 90% 0, rgb(220 232 224 / 86%), transparent 42%),
+    linear-gradient(120deg, #f4f0f8, #f6f4ef);
+  box-shadow:
+    0 2px 4px rgb(53 46 74 / 4%),
+    0 16px 32px rgb(53 46 74 / 8%),
+    inset 0 1px #fff;
+}
+
+.projects-grid {
+  perspective: 1100px;
+  gap: 22px;
+}
+
+.project-card {
+  border-top-color: #fff;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(224 218 240 / 43%), transparent 48%),
+    linear-gradient(150deg, #fffefa 4%, #f7f5fa 100%);
+  box-shadow:
+    0 2px 4px rgb(53 46 74 / 4%),
+    0 12px 22px rgb(53 46 74 / 8%),
+    0 25px 40px rgb(53 46 74 / 4%),
+    inset 0 1px #fff;
+}
+
+.project-card:nth-child(3n + 2) {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(216 233 225 / 62%), transparent 50%),
+    linear-gradient(150deg, #fffefa 4%, #f4f7f3 100%);
+}
+
+.project-card:nth-child(3n) {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(236 224 215 / 55%), transparent 50%),
+    linear-gradient(150deg, #fffefa 4%, #f8f4f0 100%);
+}
+
+.project-summary {
+  border-top-color: #fff;
+  box-shadow:
+    0 3px 5px rgb(53 46 74 / 5%),
+    0 12px 24px rgb(53 46 74 / 8%),
+    inset 0 1px #fff;
+}
+
+.projects-page .page-guide-projects {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(220 232 224 / 72%), transparent 50%),
+    linear-gradient(110deg, #fffefa, #f2f6f2);
+}
+
+.notes-page {
+  perspective: 1250px;
+  background:
+    radial-gradient(ellipse at 100% 2%, rgb(224 218 240 / 55%), transparent 30rem),
+    linear-gradient(180deg, rgb(250 249 246 / 66%), rgb(246 245 248 / 0%));
+}
+
+.notes-header {
+  border-radius: 7px 24px 24px 7px;
+  border-left: 7px solid #9b8db9;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 37px, rgb(118 106 159 / 6%) 38px 39px),
+    linear-gradient(110deg, #fffefa, #f1eef8 92%);
+  box-shadow:
+    0 3px 5px rgb(53 46 74 / 5%),
+    0 16px 30px rgb(53 46 74 / 9%),
+    inset 0 1px #fff;
+}
+
+.notes-grid {
+  perspective: 1100px;
+  gap: 23px;
+}
+
+.note-card {
+  position: relative;
+  border-top: 4px solid #a99bc9;
+  border-radius: 5px 17px 17px 17px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 33px, rgb(118 106 159 / 5%) 34px 35px),
+    #fffefa;
+  box-shadow:
+    0 3px 5px rgb(53 46 74 / 4%),
+    0 13px 24px rgb(53 46 74 / 8%),
+    inset 0 1px #fff;
+}
+
+.note-card:nth-child(3n + 2) {
+  border-top-color: #a2b9a9;
+}
+
+.note-card:nth-child(3n) {
+  border-top-color: #c9a995;
+}
+
+.note-card-icon {
+  border-radius: 50% 50% 12px 12px;
+  background: #efedf7;
+}
+
+.notes-page .page-guide-notes {
+  border-left: 5px solid #a99bc9;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 31px, rgb(118 106 159 / 5%) 32px 33px),
+    linear-gradient(110deg, #fffefa, #f1eef8);
+}
+
+.team-page {
+  perspective: 1300px;
+  background:
+    radial-gradient(ellipse at 0 0, rgb(216 233 225 / 64%), transparent 30rem),
+    radial-gradient(ellipse at 100% 60%, rgb(222 218 240 / 42%), transparent 28rem);
+}
+
+.team-header {
+  border-radius: 28px 8px 28px 8px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(190 216 197 / 70%), transparent 42%),
+    linear-gradient(115deg, #edf4ee, #f4f0f8);
+}
+
+.team-panel {
+  background:
+    linear-gradient(90deg, rgb(224 237 226 / 34%) 0 68px, transparent 68px),
+    #fffefa;
+}
+
+.team-person {
+  margin: 9px 0;
+  padding: 13px 14px;
+  border: 1px solid #e9eee9;
+  border-radius: 15px;
+  background: linear-gradient(110deg, #fffefa, #f3f7f3);
+  box-shadow: 0 3px 8px rgb(51 75 60 / 5%), inset 0 1px #fff;
+}
+
+.team-person:last-child {
+  border-bottom: 1px solid #e9eee9;
+}
+
+.team-avatar {
+  border: 2px solid #fff;
+  box-shadow: 0 4px 9px rgb(47 71 57 / 15%), inset 0 1px rgb(255 255 255 / 75%);
+}
+
+.team-add-panel {
+  border: 1px solid #e3ebe3;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(216 233 225 / 68%), transparent 42%),
+    #fffefa;
+}
+
+.team-page .page-guide-team {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(204 225 208 / 72%), transparent 44%),
+    linear-gradient(110deg, #fffefa, #eff5f0);
+}
+
+.files-page {
+  perspective: 1250px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(214 228 239 / 73%), transparent 31rem),
+    linear-gradient(150deg, #f4f6f9, #f6f5f8);
+}
+
+.files-heading {
+  min-height: 208px;
+  border-radius: 28px 28px 9px 28px;
+  background:
+    radial-gradient(ellipse at 95% 4%, rgb(190 215 232 / 75%), transparent 44%),
+    linear-gradient(120deg, #edf2f8, #f5f1f8);
+}
+
+.files-heading-icon {
+  border: 1px solid #fff;
+  background: linear-gradient(145deg, #e2ebf4, #c8d8e8);
+  box-shadow: 0 8px 18px rgb(67 93 118 / 14%), inset 0 1px #fff;
+  transform: rotateY(-12deg) rotateX(8deg);
+}
+
+.files-panel,
+.files-list-section {
+  border-top-color: #fff;
+  background: linear-gradient(145deg, #fffefa, #f2f6fa);
+}
+
+.file-upload-form {
+  padding: 19px;
+  border: 1px dashed #b7c9d9;
+  border-radius: 16px;
+  background: rgb(232 240 247 / 48%);
+}
+
+.shared-file-card {
+  border: 1px solid #e4eaf0;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #fffefa, #f3f7fa);
+}
+
+.shared-file-icon {
+  border-radius: 9px 15px 9px 9px;
+  background: linear-gradient(145deg, #e8eff6, #dbe6ef);
+  box-shadow: 0 4px 9px rgb(62 88 112 / 10%), inset 0 1px #fff;
+}
+
+.files-page .page-guide-files {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(198 219 235 / 72%), transparent 48%),
+    linear-gradient(110deg, #fffefa, #f0f5f9);
+}
+
+.notifications-page {
+  perspective: 1250px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(236 218 225 / 60%), transparent 30rem),
+    linear-gradient(150deg, #f8f3f5, #f6f5f8);
+}
+
+.notifications-heading {
+  border-radius: 10px 28px 28px 28px;
+  background:
+    radial-gradient(ellipse at 90% 0, rgb(236 216 226 / 76%), transparent 44%),
+    linear-gradient(120deg, #f8eff2, #f3f0f8);
+}
+
+.notification-card {
+  position: relative;
+  border-left: 4px solid transparent;
+  background: linear-gradient(115deg, #fffefa, #faf6f7);
+}
+
+.notification-card.unread {
+  border-left-color: #ad8197;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(239 222 231 / 52%), transparent 44%),
+    linear-gradient(110deg, #fffefa, #faf1f5);
+}
+
+.notifications-page .page-guide-notifications {
+  border-left: 5px solid #ad8197;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(236 218 225 / 73%), transparent 46%),
+    linear-gradient(110deg, #fffefa, #faf2f5);
+}
+
+.activity-page {
+  perspective: 1300px;
+  background:
+    radial-gradient(ellipse at 5% 0, rgb(214 228 239 / 65%), transparent 32rem),
+    linear-gradient(180deg, rgb(242 246 249 / 72%), transparent 60%);
+}
+
+.activity-header {
+  min-height: 210px;
+  border-radius: 28px 8px 28px 8px;
+  background:
+    radial-gradient(ellipse at 96% 0, rgb(191 216 231 / 76%), transparent 44%),
+    linear-gradient(120deg, #eaf1f7, #f2eff8);
+}
+
+.activity-list {
+  position: relative;
+  padding-left: 26px;
+}
+
+.activity-list::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#a89ac7, #a8c5b4, #d2ddea);
+  content: "";
+}
+
+.activity-card {
+  position: relative;
+  border-left: 4px solid #a89ac7;
+  background: linear-gradient(110deg, #fffefa, #f3f5f8);
+}
+
+.activity-card::before {
+  position: absolute;
+  top: 24px;
+  left: -33px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #f5f6f8;
+  border-radius: 50%;
+  background: #8879ae;
+  box-shadow: 0 0 0 2px #c9c0dc;
+  content: "";
+}
+
+.activity-page .page-guide-activity {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(202 221 235 / 75%), transparent 47%),
+    linear-gradient(110deg, #fffefa, #f0f4f8);
+}
+
+.chat-page {
+  perspective: 1350px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(224 218 240 / 60%), transparent 30rem),
+    radial-gradient(ellipse at 0 70%, rgb(216 233 225 / 50%), transparent 29rem);
+}
+
+.chat-header {
+  min-height: 145px;
+  border-radius: 24px 24px 8px 24px;
+  background:
+    radial-gradient(ellipse at 88% 0, rgb(218 212 238 / 82%), transparent 48%),
+    linear-gradient(115deg, #f2eff8, #edf3ef);
+}
+
+.chat-header-icon {
+  border: 1px solid #fff;
+  background: linear-gradient(145deg, #f9f7fc, #e4def2);
+  box-shadow: 0 7px 14px rgb(62 53 88 / 12%), inset 0 1px #fff;
+  transform: rotateY(-12deg) rotateX(8deg);
+}
+
+.chat-card {
+  transform: rotateX(0.6deg);
+  border-top-color: #fff;
+  background: linear-gradient(145deg, #fffefa, #f7f5fa);
+  box-shadow:
+    0 3px 5px rgb(53 46 74 / 5%),
+    0 17px 32px rgb(53 46 74 / 9%),
+    0 32px 54px rgb(53 46 74 / 5%),
+    inset 0 1px #fff;
+}
+
+.chat-messages {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(224 218 240 / 28%), transparent 50%),
+    linear-gradient(145deg, #fbfafc, #f3f6f3);
+}
+
+.chat-message {
+  border-radius: 5px 15px 15px 15px;
+  background: linear-gradient(145deg, #fffefa, #f0edf7);
+  box-shadow: 0 3px 8px rgb(53 46 74 / 6%), inset 0 1px #fff;
+}
+
+.chat-message:nth-child(even) {
+  border-color: #dfe9e2;
+  border-radius: 15px 5px 15px 15px;
+  background: linear-gradient(145deg, #fffefa, #edf4ef);
+}
+
+.chat-room-title {
+  background: linear-gradient(90deg, #f2eff8, #eff4f0);
+}
+
+.chat-project-select {
+  background: #fffefa;
+}
+
+.chat-compose {
+  background: #fffefa;
+}
+
+.chat-page .page-guide-chat {
+  border-radius: 24px 8px 24px 8px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(220 218 239 / 75%), transparent 46%),
+    linear-gradient(110deg, #fffefa, #f1f4f0);
+}
+
+.public-project-page {
+  perspective: 1300px;
+}
+
+.public-project-card {
+  transform: rotateY(-1deg) rotateX(1deg);
+  border-radius: 26px 8px 26px 26px;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(220 232 224 / 60%), transparent 44%),
+    #fffefa;
+  box-shadow:
+    0 4px 8px rgb(53 46 74 / 5%),
+    0 22px 46px rgb(53 46 74 / 10%),
+    0 40px 70px rgb(53 46 74 / 6%),
+    inset 0 1px #fff;
+}
+
+.auth-page {
+  perspective: 1400px;
+}
+
+.auth-feature-card {
+  transform: rotateY(3deg) rotateX(2deg);
+  box-shadow:
+    0 3px 5px rgb(53 46 74 / 5%),
+    0 12px 22px rgb(53 46 74 / 8%),
+    inset 0 1px #fff;
+}
+
+.auth-feature-card:nth-child(2) {
+  transform: translateY(-7px) rotateY(-2deg) rotateX(2deg);
+}
+
+.auth-feature-card:nth-child(3) {
+  transform: rotateY(-4deg) rotateX(2deg);
+}
+
+.auth-preview {
+  transform: perspective(900px) rotateY(-9deg) rotateX(5deg) rotateZ(-1deg);
+  box-shadow:
+    0 4px 8px rgb(53 46 74 / 5%),
+    0 20px 36px rgb(53 46 74 / 12%),
+    0 36px 56px rgb(53 46 74 / 7%),
+    inset 0 1px #fff;
+}
+
+.auth-card {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+  box-shadow:
+    0 4px 8px rgb(48 41 69 / 5%),
+    0 22px 46px rgb(48 41 69 / 13%),
+    0 40px 70px rgb(48 41 69 / 7%),
+    inset 0 1px #fff;
+}
+
+.page-guide-dashboard {
+  border-left: 5px solid #8e80b5;
+}
+
+.page-guide-public {
+  border-radius: 5px 14px 14px 14px;
+}
+
+.dashboard-welcome,
+.notes-header,
+.team-header,
+.files-heading,
+.notifications-heading,
+.chat-header,
+.activity-header {
+  border-top-color: rgb(255 255 255 / 94%);
+  box-shadow:
+    0 2px 3px rgb(61 51 85 / 4%),
+    0 14px 28px rgb(61 51 85 / 8%),
+    0 28px 54px rgb(61 51 85 / 5%),
+    inset 0 1px rgb(255 255 255 / 74%);
+}
+
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.shared-file-card,
+.notification-card,
+.chat-card,
+.chat-message,
+.activity-card,
+.page-guide,
+.auth-feature-card,
+.auth-card,
+.public-project-card,
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty {
+  transform-style: preserve-3d;
+  box-shadow:
+    0 2px 3px rgb(53 46 74 / 3%),
+    0 9px 22px rgb(53 46 74 / 5%),
+    0 20px 38px rgb(53 46 74 / 3%),
+    inset 0 1px rgb(255 255 255 / 82%);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 220ms ease,
+    border-color 180ms ease;
+}
+
+.dashboard-stat-icon,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.project-card-icon,
+.empty-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.notification-icon,
+.shared-file-icon,
+.page-guide-icon,
+.auth-feature-icon,
+.auth-logo {
+  transform: translateZ(12px);
+  box-shadow: 0 4px 10px rgb(58 49 79 / 7%), inset 0 1px rgb(255 255 255 / 85%);
+}
+
+.dashboard-pulse,
+.page-insights {
+  box-shadow:
+    0 2px 3px rgb(53 46 74 / 3%),
+    0 8px 20px rgb(53 46 74 / 4%),
+    inset 0 1px rgb(255 255 255 / 90%);
+}
+
+.navbar-logo,
+.footer-brand-icon,
+.navbar-register-button,
+.navbar-logout-button,
+.dashboard-button,
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.auth-submit {
+  transition:
+    transform 160ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.navbar-logo,
+.footer-brand-icon,
+.navbar-register-button,
+.dashboard-button,
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.auth-submit {
+  box-shadow:
+    0 2px 3px rgb(45 39 67 / 7%),
+    0 6px 13px rgb(45 39 67 / 12%),
+    inset 0 1px rgb(255 255 255 / 22%);
+}
+
+@media (max-width: 980px) {
+  .app-shell.has-sidebar .app-main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .auth-feature-grid {
+    max-width: 560px;
+    margin-top: 18px;
+  }
+
+  .auth-feature-card {
+    min-height: 100px;
+  }
+
+  .page-guide {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .page-guide-note {
+    grid-column: 2;
+  }
+
+  .dashboard-welcome,
+  .chat-card,
+  .public-project-card,
+  .auth-card {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-page {
+    min-height: 570px;
+  }
+
+  .auth-feature-grid {
+    gap: 7px;
+  }
+
+  .auth-feature-card {
+    min-height: 96px;
+    padding: 10px 8px;
+  }
+
+  .auth-feature-card small {
+    font-size: 8px;
+  }
+
+  .page-guide {
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .page-guide-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .page-guide-copy h2 {
+    font-size: 12px;
+  }
+
+  .page-guide-copy p {
+    font-size: 9px;
+  }
+
+  .auth-feature-card,
+  .auth-feature-card:nth-child(2),
+  .auth-feature-card:nth-child(3),
+  .auth-preview {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dashboard-stat-card:hover,
+  .dashboard-projects-panel:hover,
+  .dashboard-quick-panel:hover,
+  .project-card:hover,
+  .project-summary:hover,
+  .note-card:hover,
+  .team-panel:hover,
+  .team-add-panel:hover,
+  .files-panel:hover,
+  .files-list-section:hover,
+  .shared-file-card:hover,
+  .notification-card:hover,
+  .chat-card:hover,
+  .activity-card:hover,
+  .page-guide:hover,
+  .auth-feature-card:hover,
+  .auth-card:hover,
+  .public-project-card:hover {
+    transform: perspective(900px) rotateX(1deg) translateY(-4px);
+    border-color: #d4cde5;
+    box-shadow:
+      0 3px 5px rgb(53 46 74 / 4%),
+      0 15px 26px rgb(53 46 74 / 8%),
+      0 28px 46px rgb(53 46 74 / 6%),
+      inset 0 1px rgb(255 255 255 / 92%);
+  }
+
+  .dashboard-button:hover,
+  .primary-button:hover,
+  .notes-primary-button:hover:not(:disabled),
+  .team-add-button:hover:not(:disabled),
+  .notifications-mark-all:hover:not(:disabled),
+  .chat-compose button:hover:not(:disabled),
+  .file-upload-form button:hover:not(:disabled),
+  .auth-submit:hover:not(:disabled),
+  .navbar-register-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 3px 5px rgb(45 39 67 / 8%),
+      0 11px 19px rgb(45 39 67 / 18%),
+      inset 0 1px rgb(255 255 255 / 26%);
+  }
+
+  .dashboard-button:active,
+  .primary-button:active,
+  .notes-primary-button:active:not(:disabled),
+  .team-add-button:active:not(:disabled),
+  .notifications-mark-all:active:not(:disabled),
+  .chat-compose button:active:not(:disabled),
+  .file-upload-form button:active:not(:disabled),
+  .auth-submit:active:not(:disabled),
+  .navbar-register-button:active {
+    transform: translateY(1px) scale(0.99);
+  }
+
+  .auth-feature-card {
+    transition:
+      transform 220ms cubic-bezier(0.2, 0.75, 0.25, 1),
+      box-shadow 220ms ease,
+      border-color 180ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Midnight blue, open-sky blue, and a restrained warm-metal accent. */
+:root {
+  --color-primary: #3979bd;
+  --color-primary-dark: #285b91;
+  --color-accent: #e7bd78;
+  --color-ink: #1c2b40;
+  --color-muted: #68778a;
+  --color-border: #dce5ef;
+  --color-surface: #ffffff;
+  --shadow-card: 0 14px 38px rgb(29 53 80 / 8%);
+}
+
+body {
+  color: #1c2b40;
+  background:
+    radial-gradient(ellipse at 0 0, rgb(208 225 244 / 68%), transparent 33rem),
+    radial-gradient(ellipse at 100% 10%, rgb(220 235 238 / 60%), transparent 30rem),
+    #f3f6fa;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: rgb(57 121 189 / 42%);
+}
+
+.app-loading,
+.dashboard-page,
+.projects-page,
+.notes-page,
+.team-page,
+.files-page,
+.notifications-page,
+.activity-page,
+.chat-page,
+.public-project-page {
+  color: #1c2b40;
+}
+
+.app-navbar,
+.app-navbar.is-guest,
+.app-navbar.is-authenticated,
+.app-footer {
+  background:
+    radial-gradient(ellipse at 0 100%, rgb(80 131 188 / 20%), transparent 38%),
+    #17263b;
+}
+
+.app-navbar.is-guest {
+  box-shadow: 0 7px 24px rgb(20 42 67 / 15%);
+}
+
+.navbar-brand,
+.is-authenticated .navbar-brand,
+.workspace-copy strong,
+.navbar-user-name {
+  color: #f7faff;
+}
+
+.navbar-brand > span:last-child > span,
+.footer-brand > span:last-child > span {
+  color: #a9d2f5;
+}
+
+.navbar-logo,
+.footer-brand-icon {
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: linear-gradient(145deg, #d9ecfa, #8dbbe0);
+  color: #193653;
+  box-shadow: 0 5px 0 #456d91, 0 10px 18px rgb(9 24 42 / 28%);
+}
+
+.guest-nav-message,
+.workspace-copy small,
+.navbar-user-copy small {
+  color: #b6c7d9;
+}
+
+.navbar-login-link {
+  color: #e8f1fa;
+}
+
+.navbar-register-button,
+.navbar-logout-button {
+  border-color: #d7b878;
+  background: #e7bd78;
+  color: #27374b;
+  box-shadow: 0 4px 0 #a77e43, 0 8px 15px rgb(5 20 38 / 25%);
+}
+
+.navbar-register-button:hover,
+.navbar-logout-button:hover {
+  background: #f0d39d;
+  color: #27374b;
+}
+
+.workspace-avatar,
+.navbar-avatar,
+.sidebar-tip-icon {
+  border-color: rgb(159 204 241 / 30%);
+  background: rgb(128 180 224 / 15%);
+  color: #b9dcf7;
+}
+
+.workspace-copy small i,
+.nav-live-dot {
+  background: #e7bd78;
+  box-shadow: 0 0 9px rgb(231 189 120 / 65%);
+}
+
+.navbar-group-label {
+  color: #9eb2c8;
+}
+
+.navbar-link {
+  color: #c3d1df;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  background: rgb(187 218 246 / 11%);
+  color: #c2e2fc;
+}
+
+.navbar-link.active {
+  border-color: rgb(174 213 246 / 22%);
+  box-shadow: inset 3px 0 #83b8e5;
+}
+
+.sidebar-tip {
+  border-color: rgb(169 210 245 / 18%);
+  background: linear-gradient(135deg, rgb(116 170 215 / 15%), rgb(255 255 255 / 3%));
+}
+
+.sidebar-tip strong {
+  color: #e7f2fc;
+}
+
+.sidebar-tip p {
+  color: #bdcddd;
+}
+
+.navbar-logout-button {
+  color: #d7e2ed;
+}
+
+.navbar-logout-button:hover {
+  background: rgb(255 255 255 / 8%);
+  color: #c2e2fc;
+}
+
+.dashboard-page {
+  background:
+    radial-gradient(ellipse at 0 10%, rgb(211 229 246 / 58%), transparent 30rem),
+    radial-gradient(ellipse at 100% 42%, rgb(215 233 237 / 55%), transparent 28rem);
+}
+
+.dashboard-welcome {
+  border-color: rgb(255 255 255 / 34%);
+  background:
+    radial-gradient(ellipse at 78% 12%, rgb(104 159 210 / 42%), transparent 35%),
+    radial-gradient(ellipse at 100% 100%, rgb(69 130 160 / 32%), transparent 38%),
+    linear-gradient(120deg, #1a2e48, #234b70 58%, #326b86);
+  box-shadow:
+    0 3px 5px rgb(15 34 56 / 11%),
+    0 18px 34px rgb(20 55 88 / 23%),
+    0 38px 65px rgb(20 55 88 / 13%),
+    inset 0 1px rgb(255 255 255 / 35%);
+}
+
+.dashboard-welcome h1,
+.dashboard-welcome .welcome-copy > p {
+  color: #f7fbff;
+}
+
+.dashboard-welcome .dashboard-eyebrow {
+  border-color: rgb(255 255 255 / 29%);
+  background: rgb(255 255 255 / 9%);
+  color: #d8ebfb;
+}
+
+.dashboard-welcome .dashboard-button-light {
+  background: #e9f3fb;
+  color: #254a6a;
+}
+
+.dashboard-welcome .dashboard-button-outline {
+  border-color: rgb(255 255 255 / 40%);
+  color: #fff;
+}
+
+.dashboard-welcome::after,
+.notes-header::after,
+.team-header::after,
+.files-heading::after,
+.notifications-heading::after,
+.chat-header::after {
+  border-color: rgb(57 121 189 / 17%);
+  box-shadow: 0 0 0 30px rgb(57 121 189 / 5%), 0 0 0 65px rgb(57 121 189 / 3%);
+}
+
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.shared-file-card,
+.notification-card,
+.chat-card,
+.chat-message,
+.activity-card,
+.page-guide,
+.auth-feature-card,
+.auth-card,
+.public-project-card,
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty {
+  border-color: #dce5ef;
+  color: #1c2b40;
+}
+
+.dashboard-stat-card {
+  background: linear-gradient(145deg, #fff 2%, #edf4fb 100%);
+}
+
+.dashboard-stat-card:nth-child(2) {
+  background: linear-gradient(145deg, #fff 2%, #edf5f5 100%);
+}
+
+.dashboard-stat-card:nth-child(3) {
+  background: linear-gradient(145deg, #fff 2%, #f8f2e8 100%);
+}
+
+.dashboard-stat-card:nth-child(4) {
+  background: linear-gradient(145deg, #fff 2%, #eef2f8 100%);
+}
+
+.dashboard-projects-panel,
+.dashboard-quick-panel {
+  background: linear-gradient(145deg, #fff, #f0f5fa);
+}
+
+.dashboard-project-row,
+.dashboard-quick-action {
+  border-color: #e0e8f0;
+  background: linear-gradient(110deg, #fff, #f1f6fb);
+  box-shadow: 0 3px 9px rgb(29 53 80 / 5%), inset 0 1px #fff;
+}
+
+.dashboard-stat-icon.purple,
+.dashboard-stat-icon.blue,
+.dashboard-stat-icon.green,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.project-card-icon,
+.empty-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.notification-icon,
+.shared-file-icon,
+.page-insight-icon {
+  background: #e7f0f9;
+  color: #3979bd;
+}
+
+.dashboard-stat-icon.blue,
+.quick-blue {
+  background: #e8f0f8;
+  color: #4e78a2;
+}
+
+.dashboard-stat-icon.green,
+.quick-green {
+  background: #e8f2ef;
+  color: #528a7e;
+}
+
+.dashboard-text-link,
+.dashboard-inline-link,
+.tip-heading,
+.eyebrow,
+.notes-eyebrow,
+.team-eyebrow,
+.files-eyebrow,
+.dashboard-refresh,
+.team-refresh,
+.files-refresh,
+.file-download-button,
+.file-preview-button,
+.chat-sender,
+.chat-room-title svg,
+.public-project-back,
+.notification-content button,
+.projects-header .eyebrow {
+  color: #326da8;
+}
+
+.dashboard-project-role.is-owner,
+.owner-badge,
+.team-role.owner-role,
+.public-project-badge {
+  background: #e8f0f8;
+  color: #2f6497;
+}
+
+.dashboard-tip {
+  border-color: #ead9b8;
+  background: linear-gradient(135deg, #fffaf0, #f4f6f7);
+}
+
+.dashboard-tip .tip-heading {
+  color: #8b6b37;
+}
+
+.dashboard-pulse,
+.page-insights {
+  border-color: #dce5ef;
+  background: linear-gradient(110deg, #fff, #f0f5fa);
+  box-shadow: 0 2px 3px rgb(29 53 80 / 4%), 0 9px 20px rgb(29 53 80 / 5%), inset 0 1px #fff;
+}
+
+.pulse-indicator {
+  background: #55a28e;
+  box-shadow: 0 0 0 5px #e5f2ee;
+}
+
+.pulse-metric,
+.pulse-link {
+  color: #326da8;
+}
+
+.page-insights article strong,
+.page-guide-copy h2 {
+  color: #1c2b40;
+}
+
+.page-insights article small,
+.page-insights > p,
+.page-guide-copy p {
+  color: #68778a;
+}
+
+.page-insights > p {
+  border-color: #dce5ef;
+}
+
+.page-guide {
+  border-color: #dce5ef;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(209 228 246 / 73%), transparent 45%),
+    linear-gradient(110deg, #fff, #f1f6fb);
+  box-shadow: 0 3px 5px rgb(29 53 80 / 4%), 0 12px 25px rgb(29 53 80 / 7%), inset 0 1px #fff;
+}
+
+.page-guide::after {
+  border-color: rgb(57 121 189 / 14%);
+}
+
+.page-guide-icon {
+  border-color: #d8e5f1;
+  background: linear-gradient(145deg, #f5f9fd, #dceafa);
+  color: #3979bd;
+}
+
+.page-guide-label,
+.page-guide-note svg {
+  color: #3979bd;
+}
+
+.page-guide-note {
+  border-color: #dce5ef;
+  background: rgb(255 255 255 / 82%);
+  color: #53667b;
+}
+
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.activity-header-actions button:last-child,
+.auth-submit {
+  border-color: #2a5f95;
+  background: linear-gradient(180deg, #4f94d3, #3478b8);
+  color: #fff;
+  box-shadow: 0 4px 0 #285b8d, 0 8px 16px rgb(34 86 137 / 19%), inset 0 1px rgb(255 255 255 / 28%);
+}
+
+.primary-button:hover,
+.notes-primary-button:hover,
+.team-add-button:hover,
+.notifications-mark-all:hover:not(:disabled),
+.chat-compose button:hover:not(:disabled),
+.file-upload-form button:hover:not(:disabled),
+.auth-submit:hover {
+  background: linear-gradient(180deg, #65a6df, #4388c5);
+  box-shadow: 0 5px 0 #285b8d, 0 12px 21px rgb(34 86 137 / 24%), inset 0 1px rgb(255 255 255 / 30%);
+}
+
+.notes-primary-button:disabled,
+.team-add-button:disabled,
+.notifications-mark-all:disabled,
+.chat-compose button:disabled,
+.file-upload-form button:disabled {
+  border-color: #c8d4df;
+  background: #dce5ee;
+  color: #768596;
+  box-shadow: none;
+}
+
+.dashboard-button-light {
+  background: linear-gradient(180deg, #5da0dc, #397db9);
+  color: white;
+  box-shadow: 0 4px 0 #285b8d, 0 8px 16px rgb(34 86 137 / 18%);
+}
+
+.dashboard-button-light:hover {
+  background: linear-gradient(180deg, #70afe6, #478bc7);
+}
+
+.dashboard-button-outline {
+  border-color: #c4d3e2;
+  background: rgb(255 255 255 / 78%);
+  color: #285b91;
+}
+
+.projects-page {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(216 231 244 / 63%), transparent 30rem),
+    radial-gradient(ellipse at 0 65%, rgb(224 237 238 / 49%), transparent 30rem);
+}
+
+.projects-header {
+  border-color: #dae5ef;
+  background:
+    radial-gradient(ellipse at 90% 0, rgb(205 225 242 / 85%), transparent 45%),
+    linear-gradient(120deg, #edf4fb, #f4f7f8);
+  box-shadow: 0 3px 5px rgb(29 53 80 / 5%), 0 16px 32px rgb(29 53 80 / 8%), inset 0 1px #fff;
+}
+
+.project-card {
+  border-color: #dce5ef;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(211 228 246 / 58%), transparent 50%),
+    linear-gradient(150deg, #fff 4%, #f1f6fb 100%);
+}
+
+.project-card:nth-child(3n + 2) {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(210 231 228 / 65%), transparent 50%),
+    linear-gradient(150deg, #fff 4%, #f0f7f6 100%);
+}
+
+.project-card:nth-child(3n) {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(241 226 200 / 57%), transparent 50%),
+    linear-gradient(150deg, #fff 4%, #faf6ed 100%);
+}
+
+.project-card:hover,
+.dashboard-stat-card:hover,
+.note-card:hover,
+.notification-card:hover {
+  border-color: #a9c8e3;
+  box-shadow: 0 3px 5px rgb(29 53 80 / 5%), 0 16px 34px rgb(35 85 132 / 12%), 0 28px 46px rgb(35 85 132 / 6%), inset 0 1px #fff;
+}
+
+.notes-page {
+  background:
+    radial-gradient(ellipse at 100% 2%, rgb(216 231 244 / 59%), transparent 30rem),
+    linear-gradient(180deg, rgb(247 250 253 / 76%), transparent);
+}
+
+.notes-header,
+.notes-page .page-guide-notes {
+  border-color: #dae5ef;
+  border-left-color: #4d8fc8;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 37px, rgb(57 121 189 / 7%) 38px 39px),
+    linear-gradient(110deg, #fff, #edf4fb 92%);
+}
+
+.note-card {
+  border-color: #e0e6ef;
+  border-top-color: #6fa1ce;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 33px, rgb(57 121 189 / 6%) 34px 35px),
+    #fff;
+}
+
+.note-card:nth-child(3n + 2) {
+  border-top-color: #70a99a;
+}
+
+.note-card:nth-child(3n) {
+  border-top-color: #d1ad69;
+}
+
+.team-page {
+  background:
+    radial-gradient(ellipse at 0 0, rgb(209 231 227 / 68%), transparent 30rem),
+    radial-gradient(ellipse at 100% 60%, rgb(216 231 244 / 46%), transparent 28rem);
+}
+
+.team-header,
+.team-page .page-guide-team {
+  border-color: #dce8e5;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(194 224 219 / 76%), transparent 45%),
+    linear-gradient(115deg, #edf5f4, #f0f5fa);
+}
+
+.team-panel {
+  background:
+    linear-gradient(90deg, rgb(218 235 232 / 53%) 0 68px, transparent 68px),
+    #fff;
+}
+
+.team-person {
+  border-color: #dce8e5;
+  background: linear-gradient(110deg, #fff, #eff6f4);
+  box-shadow: 0 3px 8px rgb(37 78 73 / 6%), inset 0 1px #fff;
+}
+
+.team-avatar {
+  background: linear-gradient(145deg, #c8e1dc, #8fbdb4);
+  color: #274f4a;
+}
+
+.team-avatar.member-avatar {
+  background: linear-gradient(145deg, #d9e8f7, #abc9e3);
+  color: #294f74;
+}
+
+.team-add-panel {
+  border-color: #dce8e5;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(211 231 226 / 76%), transparent 45%),
+    #fff;
+}
+
+.files-page,
+.activity-page {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(208 226 244 / 72%), transparent 32rem),
+    linear-gradient(150deg, #f1f6fa, #f3f6fa);
+}
+
+.files-heading,
+.activity-header {
+  border-color: #d9e5f0;
+  background:
+    radial-gradient(ellipse at 95% 4%, rgb(187 215 240 / 79%), transparent 47%),
+    linear-gradient(120deg, #eaf2fa, #f1f5f9);
+}
+
+.files-heading-icon,
+.chat-header-icon {
+  border-color: #fff;
+  background: linear-gradient(145deg, #f1f7fc, #c7dced);
+  color: #3576b1;
+  box-shadow: 0 6px 0 #96b5d0, 0 11px 17px rgb(43 83 119 / 15%), inset 0 1px #fff;
+}
+
+.files-panel,
+.files-list-section {
+  border-color: #dce5ef;
+  background: linear-gradient(145deg, #fff, #eff5fa);
+}
+
+.file-upload-form {
+  border-color: #9cb9d2;
+  background: rgb(222 235 246 / 61%);
+}
+
+.shared-file-card {
+  border-color: #dce5ef;
+  background: linear-gradient(110deg, #fff, #eff5fa);
+}
+
+.shared-file-icon {
+  background: linear-gradient(145deg, #e4eff8, #c8dced);
+  color: #3979bd;
+}
+
+.files-page .page-guide-files,
+.activity-page .page-guide-activity {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(199 221 240 / 78%), transparent 48%),
+    linear-gradient(110deg, #fff, #eff5fa);
+}
+
+.notifications-page {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(239 226 203 / 60%), transparent 30rem),
+    linear-gradient(150deg, #f8f5ee, #f3f6fa);
+}
+
+.notifications-heading,
+.notifications-page .page-guide-notifications {
+  border-color: #e8dfcb;
+  background:
+    radial-gradient(ellipse at 90% 0, rgb(240 223 187 / 77%), transparent 47%),
+    linear-gradient(120deg, #faf5e9, #f2f5f8);
+}
+
+.notification-card {
+  border-color: #e5e7e9;
+  background: linear-gradient(115deg, #fff, #f6f8f9);
+}
+
+.notification-card.unread {
+  border-color: #e3d2ad;
+  border-left-color: #bf9451;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(244 231 203 / 60%), transparent 46%),
+    linear-gradient(110deg, #fff, #fbf6eb);
+}
+
+.notification-dot {
+  background: #b58b4d;
+}
+
+.chat-page {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(216 231 244 / 62%), transparent 30rem),
+    radial-gradient(ellipse at 0 70%, rgb(209 231 227 / 53%), transparent 29rem);
+}
+
+.chat-header,
+.chat-page .page-guide-chat {
+  border-color: #dce5ef;
+  background:
+    radial-gradient(ellipse at 88% 0, rgb(209 225 242 / 84%), transparent 49%),
+    linear-gradient(115deg, #edf4fa, #edf5f2);
+}
+
+.chat-card {
+  border-color: #dce5ef;
+  background: linear-gradient(145deg, #fff, #f1f6fa);
+}
+
+.chat-messages {
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(209 225 242 / 36%), transparent 50%),
+    linear-gradient(145deg, #f8fbfd, #edf4f3);
+}
+
+.chat-message {
+  border-color: #dce5ef;
+  background: linear-gradient(145deg, #fff, #eaf2fa);
+}
+
+.chat-message:nth-child(even) {
+  border-color: #d8e8e3;
+  background: linear-gradient(145deg, #fff, #eaf4f0);
+}
+
+.chat-room-title {
+  background: linear-gradient(90deg, #eaf2fa, #edf5f2);
+}
+
+.public-project-page {
+  background:
+    radial-gradient(ellipse at 8% 0, rgb(208 225 244 / 66%), transparent 31rem),
+    #f3f6fa;
+}
+
+.public-project-card {
+  border-color: #dce5ef;
+  background:
+    radial-gradient(ellipse at 100% 0, rgb(213 230 239 / 66%), transparent 46%),
+    #fff;
+}
+
+.public-project-icon,
+.public-project-details svg,
+.public-project-back {
+  color: #3979bd;
+}
+
+.public-project-badge {
+  background: #e8f1f8;
+  color: #2f6497;
+}
+
+.public-project-details {
+  border-color: #dce5ef;
+  background: #f1f6fa;
+}
+
+.auth-page {
+  background:
+    radial-gradient(ellipse at 6% 0, rgb(199 220 242 / 83%), transparent 40%),
+    radial-gradient(ellipse at 97% 100%, rgb(215 233 234 / 77%), transparent 42%),
+    linear-gradient(130deg, #edf4fa, #edf4f3);
+}
+
+.auth-page::before,
+.auth-page::after {
+  border-color: rgb(49 111 171 / 16%);
+  box-shadow: 0 0 0 42px rgb(57 121 189 / 4%), 0 0 0 92px rgb(57 121 189 / 3%);
+}
+
+.auth-showcase-kicker,
+.auth-showcase-copy h2 span {
+  color: #326da8;
+}
+
+.auth-showcase-kicker > span {
+  background: #d0a758;
+  box-shadow: 0 0 12px rgb(231 189 120 / 55%);
+}
+
+.auth-feature-card {
+  border-color: rgb(255 255 255 / 90%);
+  background: rgb(255 255 255 / 80%);
+}
+
+.auth-feature-icon,
+.auth-preview-project-icon {
+  background: linear-gradient(145deg, #f1f7fc, #dceafa);
+  color: #3979bd;
+}
+
+.auth-preview {
+  border-color: rgb(255 255 255 / 91%);
+  background: rgb(255 255 255 / 88%);
+}
+
+.auth-preview-dot {
+  background: #d0a758;
+}
+
+.auth-preview-online {
+  color: #488677;
+}
+
+.auth-preview-track > span {
+  background: linear-gradient(90deg, #4c90ce, #80b6ad);
+}
+
+.auth-preview-avatars span {
+  background: #dceafa;
+  color: #294f74;
+}
+
+.auth-preview-avatars span:nth-child(2) {
+  background: #d8ebe5;
+}
+
+.auth-preview-avatars span:nth-child(3) {
+  background: #f2e7d2;
+}
+
+.auth-preview-avatars span:nth-child(4) {
+  background: #f0dfb8;
+}
+
+.auth-logo {
+  border-color: #bfd4e7;
+  background: linear-gradient(145deg, #5e9bcf, #326da8);
+  color: #fff;
+  box-shadow: 0 4px 0 #285b8d, 0 9px 16px rgb(34 86 137 / 18%);
+}
+
+.auth-form input:focus,
+.password-field:focus-within {
+  border-color: #6c9fcb;
+  box-shadow: 0 0 0 4px rgb(57 121 189 / 13%);
+}
+
+.auth-footer a {
+  color: #326da8;
+}
+
+.auth-error {
+  border-color: #efd7d2;
+  background: #fbf1ee;
+}
+
+.footer-status {
+  color: #c0d5e5;
+}
+
+.footer-status i {
+  background: #83b9a9;
+  box-shadow: 0 0 10px rgb(131 185 169 / 48%);
+}
+
+.footer-column-title,
+.footer-bottom > span:nth-child(2) svg {
+  color: #e7bd78;
+}
+
+.footer-link-column > a:hover,
+.footer-bottom > a:hover {
+  color: #b6dcfa;
+}
+
+.page-guide-projects {
+  border-left: 5px solid #4d8fc8;
+}
+
+.page-guide-notes {
+  border-left: 5px solid #5a99c8;
+}
+
+.page-guide-team {
+  border-left: 5px solid #5b9b8e;
+}
+
+.page-guide-files,
+.page-guide-activity {
+  border-left: 5px solid #5488b6;
+}
+
+.page-guide-notifications {
+  border-left: 5px solid #bd9451;
+}
+
+.page-guide-chat {
+  border-left: 5px solid #4a91a1;
+}
+
+.dashboard-welcome,
+.notes-header,
+.team-header,
+.files-heading,
+.notifications-heading,
+.chat-header,
+.activity-header {
+  border-top-color: rgb(255 255 255 / 92%);
+  box-shadow:
+    0 2px 3px rgb(23 51 81 / 5%),
+    0 14px 28px rgb(23 51 81 / 9%),
+    0 28px 54px rgb(23 51 81 / 5%),
+    inset 0 1px rgb(255 255 255 / 78%);
+}
+
+.dashboard-stat-card,
+.dashboard-projects-panel,
+.dashboard-quick-panel,
+.project-card,
+.project-summary,
+.note-card,
+.team-panel,
+.team-add-panel,
+.files-panel,
+.files-list-section,
+.shared-file-card,
+.notification-card,
+.chat-card,
+.chat-message,
+.activity-card,
+.page-guide,
+.auth-feature-card,
+.auth-card,
+.public-project-card,
+.empty-projects,
+.notes-empty,
+.team-empty,
+.files-empty,
+.notifications-empty {
+  box-shadow:
+    0 2px 3px rgb(23 51 81 / 4%),
+    0 9px 22px rgb(23 51 81 / 6%),
+    0 20px 38px rgb(23 51 81 / 3%),
+    inset 0 1px rgb(255 255 255 / 88%);
+}
+
+.dashboard-stat-icon,
+.dashboard-project-icon,
+.quick-action-icon,
+.summary-icon,
+.project-card-icon,
+.empty-icon,
+.note-card-icon,
+.team-panel-icon,
+.team-add-icon,
+.notification-icon,
+.shared-file-icon,
+.page-guide-icon,
+.auth-feature-icon,
+.auth-logo {
+  box-shadow: 0 4px 10px rgb(23 51 81 / 9%), inset 0 1px rgb(255 255 255 / 90%);
+}
+
+.navbar-logo,
+.footer-brand-icon,
+.navbar-register-button,
+.navbar-logout-button,
+.dashboard-button,
+.primary-button,
+.notes-primary-button,
+.team-add-button,
+.notifications-mark-all,
+.chat-compose button,
+.file-upload-form button,
+.auth-submit {
+  box-shadow:
+    0 3px 4px rgb(20 46 74 / 9%),
+    0 7px 14px rgb(20 46 74 / 14%),
+    inset 0 1px rgb(255 255 255 / 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Keep the chosen light palette consistent regardless of operating-system theme. */
+  :root {
+  color-scheme: light;
+  }
+}

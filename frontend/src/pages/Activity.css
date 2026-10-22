@@ -1,0 +1,56 @@
+
+.activity-page {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 24px;
+}
+
+.activity-page h1 {
+  margin: 24px 0 8px;
+}
+
+.activity-page select {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.activity-page button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.activity-list {
+  display: grid;
+  gap: 14px;
+}
+
+.activity-card {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+}
+
+.activity-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.activity-card p {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.activity-card small {
+  color: #6b7280;
+}
+
+.activity-error {
+  color: #dc2626;
+}
