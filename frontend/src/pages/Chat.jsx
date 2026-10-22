@@ -12,7 +12,8 @@ import {
 } from "lucide-react";
 import "./Chat.css";
 
-const SOCKET_URL = "http://localhost:3000";
+const SOCKET_URL =
+  import.meta.env.VITE_SOCKET_URL || "http://localhost:3000";;
 
 export default function Chat() {
   const [projects, setProjects] = useState([]);
